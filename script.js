@@ -28,6 +28,7 @@ function checkNum() {
       .querySelector('body')
       .setAttribute('style', 'background-color: green;');
     console.log('success');
+    document.querySelector('.number').textContent = num;
     return;
   } else if (check < num) {
     document.querySelector('.message').textContent = 'LOW';
