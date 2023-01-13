@@ -5,7 +5,7 @@ function again() {
   document.querySelector('.again').textContent = 'Again!';
   document.querySelector('.score').textContent = 20;
   document
-    .querySelector('.message')
+    .querySelector('body')
     .setAttribute('style', 'background-color: none;');
   document.querySelector('.message').textContent = 'Start guessing...';
   num = Math.floor(Math.random() * 20) + 1;
@@ -18,17 +18,17 @@ function checkNum() {
 
   let check = document.querySelector('.guess').value;
   console.log(num);
-  score--;
-  document.querySelector('.score').textContent = score;
+
   if (check == num) {
     document.querySelector('.message').textContent = 'CONGRATS🙌';
     if (document.querySelector('.highscore').textContent < score) {
       document.querySelector('.highscore').textContent = score;
     }
     document
-      .querySelector('.message')
+      .querySelector('body')
       .setAttribute('style', 'background-color: green;');
     console.log('success');
+    return;
   } else if (check < num) {
     document.querySelector('.message').textContent = 'LOW';
 
@@ -40,4 +40,6 @@ function checkNum() {
   } else {
     document.querySelector('.message').textContent = 'You Need to Start';
   }
+  score--;
+  document.querySelector('.score').textContent = score;
 }
