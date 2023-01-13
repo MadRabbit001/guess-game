@@ -8,6 +8,8 @@ function again() {
     .querySelector('body')
     .setAttribute('style', 'background-color: none;');
   document.querySelector('.message').textContent = 'Start guessing...';
+  document.querySelector('.number').textContent = '?';
+  document.querySelector('.number').setAttribute('style', 'width:15rem;');
   num = Math.floor(Math.random() * 20) + 1;
   score = 20;
   return num;
@@ -28,6 +30,7 @@ function checkNum() {
       .querySelector('body')
       .setAttribute('style', 'background-color: green;');
     console.log('success');
+    document.querySelector('.number').setAttribute('style', 'width:25rem;');
     document.querySelector('.number').textContent = num;
     return;
   } else if (check < num) {
