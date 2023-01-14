@@ -1,5 +1,9 @@
 'use strict';
 
+alert(
+  'instructions: \n you need to find the hidden number \n (between 1-100 inclusive)'
+);
+
 let num;
 let score;
 
