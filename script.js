@@ -35,6 +35,12 @@ function regular() {
     .setAttribute('style', 'background-color: none;');
 }
 
+function correct() {
+  document
+    .querySelector('body')
+    .setAttribute('style', 'background-color: green;');
+}
+
 function again() {
   document.querySelector('.again').textContent = 'Again!';
   document.querySelector('.score').textContent = 10;
@@ -60,13 +66,13 @@ function checkNum() {
     if (document.querySelector('.highscore').textContent < score) {
       document.querySelector('.highscore').textContent = score;
     }
-    document
-      .querySelector('body')
-      .setAttribute('style', 'background-color: none;');
-    console.log('success');
     document.querySelector('.number').setAttribute('style', 'width:25rem;');
     document.querySelector('.number').textContent = num;
-    anime();
+    setTimeout(correct, 0);
+    setTimeout(regular, 250);
+    setTimeout(correct, 500);
+    setTimeout(regular, 700);
+    setTimeout(correct, 900);
     return;
   } else if (check < num) {
     document.querySelector('.message').textContent = 'TOO LOW';
