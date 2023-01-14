@@ -97,7 +97,7 @@ function checkNum() {
     score--;
   }
   document.querySelector('.score').textContent = score;
-  if (score == 0) {
+  if (score <= 0) {
     document.querySelector('.message').textContent =
       "you're a loser and you need to die💩";
     return;
