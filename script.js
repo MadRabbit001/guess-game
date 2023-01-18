@@ -63,7 +63,7 @@ function checkNum() {
   // document.querySelector('.message');
 
   let check = document.querySelector('.guess').value;
-  console.log(num);
+  
 
   if (check == num) {
     document.querySelector('.message').textContent = 'CONGRATS🙌';
